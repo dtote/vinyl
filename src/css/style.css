@@ -1,0 +1,55 @@
+:root {
+  --background-color: cyan;
+  --big-color: black;
+  --medium-color: red;
+  --little-color: white;
+  --cover-color: grey;
+  --base-size: 20px;
+  --translation-size: -25px; 
+  --cover-image: url("../assets/sen2kbrn_custom.jpg")
+}
+body {
+  background: var(--background-color);
+}
+
+body, .container, .big, .medium {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vinyl-cover {
+  height: calc(var(--base-size) * 10);
+  width: calc(var(--base-size) * 10);
+  background-image: var(--cover-image);
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.vinyl {
+  transform: translateX(var(--translation-size));
+  margin: 5rem auto;
+  z-index: -1;
+  filter: drop-shadow(5px 3px 5px rgba(0, 0, 0, 0.5));
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.big {
+  height: calc(var(--base-size) * 10);
+  width: calc(var(--base-size) * 10);
+  background: var(--big-color);
+}
+
+.medium {
+  height: calc(var(--base-size) * 4);
+  width: calc(var(--base-size) * 4);
+  background: var(--medium-color);
+}
+
+.little {
+  height: calc(var(--base-size) / 2);
+  width: calc(var(--base-size) / 2);
+  background: var(--little-color);
+}
